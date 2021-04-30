@@ -92,6 +92,7 @@ class SSHhost:
             f"ssh-keyscan -4 -t {key_type} {self.domain}",
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
+            shell=True,
             check=True,
         )
         key_strings = resp.stdout.decode("ascii").rstrip().split(" ")
