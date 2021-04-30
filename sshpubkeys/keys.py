@@ -59,7 +59,6 @@ import ecdsa
 import hashlib
 import re
 import struct
-import sys
 import warnings
 
 __all__ = ["AuthorizedKeysFile", "SSHKey"]

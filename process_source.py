@@ -81,7 +81,7 @@ print("data.json file written\n")
 with open(DIRECTORY + HOSTS_FILE, "w", newline="\n") as knownhost_file:
     for servi in servers:
         servi.write_knownhosts_lines(knownhost_file)
-print("knonw_hosts file written\n")
+print("known_hosts file written\n")
 
 
 print("Finished on :", datetime.datetime.utcnow().strftime("%b %d %Y at %H:%M:%S UTC"))
