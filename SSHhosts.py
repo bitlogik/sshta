@@ -42,7 +42,7 @@ class HostKey(SSHKey):
             return (hex(pub_point.x()), hex(pub_point.y()))
         elif keytype == "ed25519":
             # (x) of the Ed25519 curve point
-            return int.from_bytes(self._decoded_key, "big")
+            return (f"0x{self._decoded_key[-32:].hex()}")
         elif keytype == "rsa":
             # (e,n)
             pub_numbers = self.rsa.public_numbers()
